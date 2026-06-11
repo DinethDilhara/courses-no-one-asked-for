@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: enrollment-service
+  namespace: cnoaf
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: enrollment-service
+
+  template:
+    metadata:
+      labels:
+        app: enrollment-service
+
+    spec:
+      containers:
+        - name: enrollment-service
+          image: <account-id>.dkr.ecr.<region>.amazonaws.com/cnoaf/enrollment-service:latest
+
+          ports:
+            - containerPort: 8083
