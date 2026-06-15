@@ -1,21 +1,41 @@
-# React + TypeScript + Vite + shadcn/ui
+# Client
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+Frontend application for **courses-no-one-asked-for (CNOAF)**.
 
-## Adding components
+The client is built using **React**, **TypeScript**, **Tailwind CSS**, and **shadcn/ui** to provide a modern and responsive user interface for the platform.
 
-To add components to your app, run the following command:
+<video src="../assets/client-ui-demo.mp4" controls></video>
+
+## Technologies Used
+
+* React
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+* Vite
+
+## Setup
+
+Clone the repository and navigate to the client directory:
 
 ```bash
-npx shadcn@latest add button
+cd client
 ```
 
-This will place the ui components in the `src/components` directory.
+Install dependencies:
 
-## Using components
+```bash
+pnpm install
+```
 
-To use the components in your app, import them as follows:
+Create a `.env` file from `.env.example`:
 
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+cp .env.example .env
+```
+
+Update the API Gateway base URL:
+
+```env
+VITE_API_BASE_URL=https://your-api-gateway-url.amazonaws.com
 ```
